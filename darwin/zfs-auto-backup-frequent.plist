@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- label -->   
+        <key>Label</key>
+        <string>zfs-auto-snapshot-frequent</string>
+
+        <!-- script -->
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/zfs-auto-snapshot</string>
+            <string>--default-exclude</string>
+            <string>--skip-scrub</string>
+            <string>--prefix=znap</string>
+            <string>--label=frequent</string>
+            <string>--keep=4</string>
+            <string>//</string>
+        </array>
+
+        <!-- launchctl loadしたタイミングで実行するか -->
+        <key>RunAtLoad</key>
+        <true/>
+
+        <!-- インターバル指定(例:1時間毎、秒単位で) -->
+        <key>StartInterval</key>
+        <integer>900</integer>
+
+        <!-- カレンダー指定(例:毎日10時30分に実行) -->
+        <!-- 今回はインターバルでやるのでコメント -->
+        <!--
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Minute</key>
+            <integer>30</integer>
+            <key>Hour</key>
+            <integer>10</integer>
+        </dict>
+        -->
+
+        <!-- ログの指定 -->
+        <key>StandardErrorPath</key>
+        <string>/var/log/zfs-auto-snapshot/error.log</string>
+        <key>StandardOutPath</key>
+        <string>/var/log/zfs-auto-snapshot/info.log</string>
+        <!-- ログを出さない場合は/dev/null -->
+        <!--
+        <key>StandardErrorPath</key>
+        <string>/dev/null</string>
+        <key>StandardOutPath</key>
+        <string>/dev/null</string>
+        -->
+    </dict>
+</plist>
