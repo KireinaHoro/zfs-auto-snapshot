@@ -23,20 +23,32 @@
         <true/>
 
         <!-- インターバル指定(例:1時間毎、秒単位で) -->
+        <!--
         <key>StartInterval</key>
         <integer>900</integer>
+        -->
 
         <!-- カレンダー指定(例:毎日10時30分に実行) -->
         <!-- 今回はインターバルでやるのでコメント -->
-        <!--
         <key>StartCalendarInterval</key>
-        <dict>
-            <key>Minute</key>
-            <integer>30</integer>
-            <key>Hour</key>
-            <integer>10</integer>
-        </dict>
-        -->
+        <array>
+            <dict>
+                <key>Minute</key>
+                <integer>0</integer>
+            </dict>
+            <dict>
+                <key>Minute</key>
+                <integer>15</integer>
+            </dict>
+            <dict>
+                <key>Minute</key>
+                <integer>30</integer>
+            </dict>
+            <dict>
+                <key>Minute</key>
+                <integer>45</integer>
+            </dict>
+        </array>
 
         <!-- ログの指定 -->
         <key>StandardErrorPath</key>

@@ -22,21 +22,20 @@
         <key>RunAtLoad</key>
         <true/>
 
-        <!-- インターバル指定(例:1時間毎、秒単位で) -->
+        <!-- インターバル指定(例:1時間毎、秒単位で)
         <key>StartInterval</key>
         <integer>86400</integer>
+         -->
 
         <!-- カレンダー指定(例:毎日10時30分に実行) -->
         <!-- 今回はインターバルでやるのでコメント -->
-        <!--
         <key>StartCalendarInterval</key>
         <dict>
             <key>Minute</key>
-            <integer>30</integer>
+            <integer>0</integer>
             <key>Hour</key>
-            <integer>10</integer>
+            <integer>0</integer>
         </dict>
-        -->
 
         <!-- ログの指定 -->
         <key>StandardErrorPath</key>
