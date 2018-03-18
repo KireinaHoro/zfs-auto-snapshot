@@ -20,7 +20,7 @@
 
         <!-- launchctl loadしたタイミングで実行するか -->
         <key>RunAtLoad</key>
-        <true/>
+        <false/>
 
         <!-- インターバル指定(例:1時間毎、秒単位で)
         <key>StartInterval</key>
